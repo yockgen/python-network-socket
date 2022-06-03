@@ -14,4 +14,4 @@ s.send(byt)
 print (s.recv(1024).decode())
 s.close()                     # Close the socket when done
 
-#python3 talker.py 173.16.1.200 12345 'testing from yockgen cleint'
+#python3 talker.py 173.16.1.200 12345 'testing from yockgen client'
