@@ -1,15 +1,17 @@
 #!/usr/bin/python           # This is client.py file
-
+import sys
 import socket               # Import socket module
 
 s = socket.socket()         # Create a socket object
-host = socket.gethostname() # Get local machine name
-port = 80                # Reserve a port for your service.
+host = sys.argv[1]          #'173.16.1.200'  # Get local machine name
+port = int(sys.argv[2])     #12345                # Reserve a port for your service.
+st = sys.argv[3]            #'client  testing'
 
 s.connect((host, port))
-st='!!!!from talker!!!'
 byt=st.encode()
 s.send(byt)
 
 print (s.recv(1024).decode())
 s.close()                     # Close the socket when done
+
+#python3 talker.py 173.16.1.200 12345 'testing from yockgen cleint'
