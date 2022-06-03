@@ -20,4 +20,4 @@ while True:
    c.send(strMsg.encode())
    c.close()                # Close the connection
 
-#python3  server.py 173.16.1.200 12345
+#python3  listener.py 173.16.1.200 12345
